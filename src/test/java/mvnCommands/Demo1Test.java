@@ -11,5 +11,6 @@ public class Demo1Test {
 	{
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.amazon.com/");
+		driver.quit();
 	}
 }

@@ -11,6 +11,7 @@ public class Demo2Test {
 	{
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com/");
+		driver.quit();
 	}
 
 }
