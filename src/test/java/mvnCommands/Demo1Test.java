@@ -12,5 +12,7 @@ public class Demo1Test {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.amazon.com/");
 		driver.quit();
+		System.out.println("2nd Push from main branch");
+		System.out.println("Made changes in main branch but want to display in master branch");
 	}
 }
