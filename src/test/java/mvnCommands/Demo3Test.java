@@ -11,6 +11,7 @@ public class Demo3Test {
 	{
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.instagram.com/");
+		System.out.println("Title:"+ driver.getTitle());
 		driver.quit();
 	}
 
