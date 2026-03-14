@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="mvnCommands.Demo2Test">
+        <methods>
+          <include name="sample2Test"/>
+        </methods>
+      </class> <!-- mvnCommands.Demo2Test -->
+      <class name="mvnCommands.Demo1Test">
+        <methods>
+          <include name="sample1Test"/>
+        </methods>
+      </class> <!-- mvnCommands.Demo1Test -->
+      <class name="mvnCommands.Demo3Test">
+        <methods>
+          <include name="sample2Test"/>
+        </methods>
+      </class> <!-- mvnCommands.Demo3Test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
