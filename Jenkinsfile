@@ -26,7 +26,7 @@ pipeline{
 		stage('Publish HTML Report') {
             steps {
                 publishHTML([
-                    reportDir: 'test-output',
+                    reportDir: 'C:\Users\Sudeshna Pathak\eclipse-workspace\MavenProject\test-output',
                     reportFiles: 'index.html',
                     reportName: 'TestNG HTML Report'
                 ])
