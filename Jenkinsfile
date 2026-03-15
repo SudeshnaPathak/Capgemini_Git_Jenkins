@@ -1,39 +1,45 @@
-pipeline{
-	
-	 agent any
-	 
-	  tools {
+pipeline {
+
+    agent any
+
+    tools {
         maven 'MyMaven'
         jdk 'MyJava'
     }
-    
-    stages{
-		
-		stage('Build')
-		{
-			steps{
-				bat 'mvn clean compile'
-			}
-		}
-		
-		stage('Run TestNg Tests')
-		{
-			steps{
-				bat 'mvn test'
-			}
-		}
-		
-		stage('Publish HTML Report') {
+
+    stages {
+
+        stage('Build') {
+            steps {
+                bat 'mvn clean compile'
+            }
+        }
+
+        stage('Run TestNG Tests') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+
+        stage('Publish TestNG Results') {
+            steps {
+                testNG(
+                    reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'
+                )
+            }
+        }
+
+        stage('Publish HTML Report') {
             steps {
                 publishHTML([
-					allowMissing: false,
-		            alwaysLinkToLastBuild: true,
-		            keepAll: true,
-                    reportDir: 'C:\\Users\\Sudeshna Pathak\\eclipse-workspace\\MavenProject\\test-output',
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'test-output',
                     reportFiles: 'index.html',
                     reportName: 'TestNG HTML Report'
                 ])
             }
         }
-	}
+    }
 }
