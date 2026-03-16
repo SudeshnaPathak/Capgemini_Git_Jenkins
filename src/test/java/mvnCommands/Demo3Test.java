@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class Demo3Test {
 
 	@Test
-	public void sample2Test()
+	public void sample3Test()
 	{
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.instagram.com/");
