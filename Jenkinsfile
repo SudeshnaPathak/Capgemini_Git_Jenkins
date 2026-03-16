@@ -35,7 +35,7 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'test-output',
+                    reportDir: 'target/surefire-reports',
                     reportFiles: 'index.html',
                     reportName: 'TestNG HTML Report'
                 ])
